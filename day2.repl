@@ -1,0 +1,234 @@
+Python 3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> result
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'result' is not defined
+>>> result = 10
+>>> 10
+10
+>>> result
+10
+>>> 10 * result
+100
+>>> 10Result
+  File "<stdin>", line 1
+    10Result
+     ^
+SyntaxError: invalid decimal literal
+>>> _result
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name '_result' is not defined. Did you mean: 'result'?
+>>> _result = 100
+>>> _result
+100
+>>> resultOfExpression = 10 * 12
+>>> resultOfExployeeTable
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'resultOfExployeeTable' is not defined
+>>>
+>>> result_of_employee_table
+KeyboardInterrupt
+>>>
+>>> result = 10
+>>> print( type(result) )
+<class 'int'>
+>>>
+>>> name = "Ravi"
+>>> name
+'Ravi'
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>> print ( type(name) )
+<class 'str'>
+>>> x = 1.5
+>>>
+>>> print ( type(x) )
+<class 'float'>
+>>> is_number = True
+>>>
+>>> print ( type(is_number) )
+<class 'bool'>
+>>>
+>>> tpl = (1,2,3,"name")
+>>>
+>>> print( type(tpl) )
+<class 'tuple'>
+>>>
+>>>
+>>>
+>>> is_number = True
+>>> print( is_Number )
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'is_Number' is not defined. Did you mean: 'is_number'?
+>>>
+>>> is_number = False
+>>>
+>>> is_number
+False
+>>>
+>>> 'Hello Everyone'
+'Hello Everyone'
+>>>
+>>> "Hello Everyone"
+'Hello Everyone'
+>>> 'this is ravi's class'
+  File "<stdin>", line 1
+    'this is ravi's class'
+                  ^
+SyntaxError: invalid syntax
+>>> "this is ravi's class"
+"this is ravi's class"
+>>> 'this' + "is ravi"
+'thisis ravi'
+>>> 'this' + " is ravi"
+'this is ravi'
+>>>
+>>> 'this' + 4
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: can only concatenate str (not "int") to str
+>>> 'this' + str(4)
+'this4'
+>>>
+>>> 'this' + '4'
+'this4'
+>>> 'this ' * 4
+'this this this this '
+>>>
+>>> "fadfas"
+'fadfas'
+>>> """ fsadfsdaf
+... dfadfas
+... dfadfas
+... dfadfa
+... dfadfa
+... """
+' fsadfsdaf \ndfadfas\ndfadfas\ndfadfa\ndfadfa\n'
+>>>
+>>> 'this is ravi\'s class'
+"this is ravi's class"
+>>> my_str = "Hello Everyone"
+>>>
+>>> my_str.capitalize()
+'Hello everyone'
+>>> print( my_str.capitalize() )
+Hello everyone
+>>>
+>>> my_str.upper()
+'HELLO EVERYONE'
+>>>
+>>> my_str.lower()
+'hello everyone'
+>>>
+>>> len( my_str )
+14
+>>> my_str.len()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'str' object has no attribute 'len'
+>>>
+>>> my_str.lenght()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'str' object has no attribute 'lenght'
+>>>
+>>> my_str.size()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'str' object has no attribute 'size'
+>>>
+>>> my_str
+'Hello Everyone'
+>>> my_str.replace('Everyone' 'All').upper()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: replace expected at least 2 arguments, got 1
+>>> my_str.replace('Everyone', 'All').upper()
+'HELLO ALL'
+>>> my_str.replace('Everyone', 'All').upper().split()
+['HELLO', 'ALL']
+>>> my_str.replace('Everyone', 'All').upper().split('|')
+['HELLO ALL']
+>>> my_str = "He | Everyone"
+>>> my_str.replace('Everyone', 'All').upper().split('|')
+['HE ', ' ALL']
+>>> my_str.reverse()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'str' object has no attribute 'reverse'
+>>> my_str[::-1\
+...
+KeyboardInterrupt
+>>> my_str[::-1]
+'enoyrevE | eH'
+>>> my_str[1::]
+'e | Everyone'
+>>> my_str[1::3]
+'e eo'
+>>>
+>>>
+>>>
+>>> my_str[0:2]
+'He'
+>>> my_str[:2]
+'He'
+>>>
+>>> my_str[3:]
+'| Everyone'
+>>> my_str[:-3]
+'He | Every'
+>>> name = input("please enter your name : ")
+please enter your name : Ravi
+>>> print( name )
+Ravi
+>>> name1 = input("please enter your name : ")
+please enter your name : Python
+>>> name1
+'Python'
+>>> name1 = input("please enter your name : ")
+please enter your name : Ravi Chandra
+>>> name1
+'Ravi Chandra'
+>>> attendees = input("Enter attendees names : )
+  File "<stdin>", line 1
+    attendees = input("Enter attendees names : )
+                      ^
+SyntaxError: unterminated string literal (detected at line 1)
+>>> attendees = input("Enter attendees names : ")
+Enter attendees names : Ravi Raja Anil Vamsi Santhu
+>>> attendees
+'Ravi Raja Anil Vamsi Santhu'
+>>> attendees.split()
+['Ravi', 'Raja', 'Anil', 'Vamsi', 'Santhu']
+>>> attendees.split()[0]
+'Ravi'
+>>> attendees.split()[3]
+'Vamsi'
+>>> {'name' : ['ravi', 'raja'], 'sal': [100, 10000], 'location': ['NJ', 'GA'] }
+{'name': ['ravi', 'raja'], 'sal': [100, 10000], 'location': ['NJ', 'GA']}
+>>>
+>>> emp = {'name' : ['ravi', 'raja'], 'sal': [100, 10000], 'location': ['NJ', 'GA'] }
+>>> print( emp['location'] )
+['NJ', 'GA']
+>>> print( emp['location'][1] )
+GA
+>>> print( emp['name'], emp['sal], emp['location'] )
+  File "<stdin>", line 1
+    print( emp['name'], emp['sal], emp['location'] )
+                                                ^
+SyntaxError: unterminated string literal (detected at line 1)
+>>>
+>>>
+>>> print( emp['name'], emp['sal'], emp['location'] )
+['ravi', 'raja'] [100, 10000] ['NJ', 'GA']
+>>>
