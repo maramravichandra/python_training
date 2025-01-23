@@ -1,0 +1,166 @@
+Resevered keywords:
+ True, False, None
+ and, or ,not,is
+ if, elif, else
+ while, for, break, continue, return, in, yield
+ try, except, finally, raise, assert
+ import, from, as, class, def, pass, global, nonlocal, lambda, del, with
+
+Above words we can't use as variable names or method names
+
+Examples:
+
+PS C:\Users\mravi> python
+Python 3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> True
+True
+>>> False
+False
+>>> 1
+1
+>>> 0
+0
+>>> True == 1
+True
+>>> False != 1
+True
+>>> 0 == True
+False
+>>> age = input("Enter your age to allow you into theatre: )
+  File "<stdin>", line 1
+    age = input("Enter your age to allow you into theatre: )
+                ^
+SyntaxError: unterminated string literal (detected at line 1)
+>>> age = input("Enter your age to allow you into theatre: ")
+Enter your age to allow you into theatre: 10
+>>> age = 10
+>>> if age >= 18 :
+...  print("you are allowed to watch movie")
+... else:
+...  print("You are not allowed to watch movie")
+...
+You are not allowed to watch movie
+>>>
+>>>
+>>> if age >= 10:
+...        print("allowed")
+...    print("not allowed")
+  File "<stdin>", line 3
+    print("not allowed")
+                        ^
+IndentationError: unindent does not match any outer indentation level
+>>> else:
+  File "<stdin>", line 1
+    else:
+    ^^^^
+SyntaxError: invalid syntax
+>>>     print("allowed")
+  File "<stdin>", line 1
+    print("allowed")
+IndentationError: unexpected indent
+>>> if age >= 10:
+...        print("allowed")
+...        print("not allowed")
+... else:
+...     print("allowed")
+...
+...
+...
+allowed
+not allowed
+>>>
+>>> 2 < 3 < 4 < 5 < 6
+True
+>>> 2 < 3 < 4 < 5 > 6
+False
+>>>
+>>>
+>>> True and True
+True
+>>> True and False
+False
+>>> False and True
+False
+>>> False and False
+False
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>>
+>>> True + 1
+2
+>>> True + 10
+11
+>>> False + 10
+10
+>>> 2age = 10
+  File "<stdin>", line 1
+    2age = 10
+    ^
+SyntaxError: invalid decimal literal
+>>>
+>>> Age = 10
+>>> age = 10
+>>> _age = 10
+>>> age1 = 10
+>>> age2 = 30
+>>> age3 = 50
+>>> print( age1, age2, age3)
+10 30 50
+>>>
+>>>
+>>>
+>>> print( age1, age2, age3)
+10 30 50
+>>>
+>>>
+>>>
+>>> if 'A' > 10 :
+...     print("A > 10")
+...
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: '>' not supported between instances of 'str' and 'int'
+>>>
+>>>
+>>>
+>>>
+>>> if 'A' > 'a' :
+...  print(" A > a ")
+...
+>>>
+>>>
+>>> if 'A' < 'a' :
+...  print(" A < a")
+...
+ A < a
+>>> and
+  File "<stdin>", line 1
+    and
+    ^^^
+SyntaxError: invalid syntax
+>>> or
+  File "<stdin>", line 1
+    or
+    ^^
+SyntaxError: invalid syntax
+>>> not
+  File "<stdin>", line 1
+    not
+       ^
+SyntaxError: invalid syntax
+>>> not = 10
+  File "<stdin>", line 1
+    not = 10
+        ^
+SyntaxError: invalid syntax
+>>>
+
