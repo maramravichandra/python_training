@@ -1,6 +1,6 @@
 Resevered keywords:
  True, False, None
- and, or ,not,is
+ and, or ,not, is
  if, elif, else
  while, for, break, continue, return, in, yield
  try, except, finally, raise, assert
