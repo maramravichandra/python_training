@@ -15,3 +15,10 @@ for line in file.readlines():
 
 print('Result ', result)
 
+
+"""
+Implement a method to find out given number is even or not
+True - for even number
+False - for Odd number
+
+"""

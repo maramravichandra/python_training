@@ -1,4 +1,4 @@
-from com.examples.class_and_objects.Vehicle import Vehicle
+from com.examples.class_and_objects.vehicle import Vehicle
 
 
 class Car(Vehicle):
