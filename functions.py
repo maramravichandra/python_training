@@ -50,6 +50,13 @@ just_say_hello(message="How are you?")
 just_say_hello(name="Ravi")
 
 
+globals()
+def add(num1, num2):
+    result = num1 + num2
+
+print("Result")
+
+
 
 
 
