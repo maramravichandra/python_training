@@ -1,7 +1,5 @@
 import sys
 
-from dask.array.ufunc import da_frompyfunc
-
 
 def find_division():
     try:
