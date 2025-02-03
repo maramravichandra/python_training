@@ -1,6 +1,5 @@
 import sys
 
-
 def find_division():
     try:
         numerator = int(input("Enter the numerator : "))
