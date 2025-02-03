@@ -43,7 +43,9 @@ dict2 = {'a':3, "c":2}
 print("Merging dict : ", {**dict1, **dict2} )
 print("Merging dict : ", {**dict2, **dict1} )
 
+# {key:value}    {1,2,54}
 employee_data = {
+    "data" : [
     {
         "id" : 100,
         "sal" : 100000
@@ -66,6 +68,7 @@ employee_data = {
         "id" : 1005,
         "sal" : 1990000
     }
+    ]
 }
 
 # find out max salary of employee
