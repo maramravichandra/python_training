@@ -30,8 +30,6 @@ print("is_palindrome2 : ", is_palindrome2(word))
 print("is_palindrome3 : ", is_palindrome3(word))
 print("is_palindrome4 : ", is_palindrome4(word))
 
-
-
 numbers = [1,2,5,10,3]
 # Find out cumulative sum without using another list
 curr_sum = 0
