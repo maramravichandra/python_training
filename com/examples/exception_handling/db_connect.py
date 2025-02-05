@@ -13,9 +13,8 @@ def connect_db(retry=0):
         # queries
         cur.execute("insert into employee(id,name,address,sal) values(100,'Ravi', 'Edison,NJ', 1000000)")
         connection.commit()
-        cur.execute("Select * from employee1")
-        rows = cur.fetchall()
-        print("All rows : ", rows)
+        cur.execute("Select * from employee")
+        print("Row count : ", cur.rowcount)
     except TimeoutError:
         print("Timed out.")
         if retry == 3:
