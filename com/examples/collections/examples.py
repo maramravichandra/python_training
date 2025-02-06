@@ -37,7 +37,6 @@ start = 1
 end = 10
 prime_numbers = list()
 start_time = datetime.datetime.now()
-print(start_time)
 for i in range(start,end+1):
     if is_prime_number(i):
         prime_numbers.append(i)
