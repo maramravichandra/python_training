@@ -1,9 +1,6 @@
 # 2 numbers 5 and 10 . swap these numbers and print
 # Print actual numbers then print swapped numbers
 import datetime
-import time
-
-from anyio import current_time
 
 
 def swap(x,y):
