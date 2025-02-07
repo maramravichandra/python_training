@@ -50,9 +50,12 @@ print("Remove everything from L ", l)
 print("Length of list ", len(l))
 
 
-# list1 = ['a','b','c','d']
-# list2 = [1,2,3,4]
+list1 = ['a','b','c','d']
+list2 = [1,2,3,4]
 # dict = { 'a' : 1, 'b':2, 'c':3, 'd':4 }
+dictA = dict(zip(list1, list2))
+print(dictA)
+
 
 
 
