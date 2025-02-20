@@ -5,3 +5,6 @@ print(respose.text)
 
 respose = requests.get("https://google.com")
 print(respose.text)
+
+l = []
+l.index()
