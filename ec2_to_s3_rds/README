@@ -17,3 +17,5 @@ sh initial_setup.sh
 --Run files_move.sh
 sh files_move.sh
 
+-- To access Resources from EC2 you have respective policies should be attached to your ec2 role
+
