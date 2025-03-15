@@ -1,0 +1,19 @@
+Test Ec2 connection from local machine
+
+You have to move some files like
+initial_setup.sh --> It will install all necessary packages in EC2
+files_move.sh --> it will loop all files under user_files and copy into s3 and also calls python script
+ec2_connect_rds.py --> It will insert metadata of copies files to RDS
+
+you have to use below command to copy all above files into EC2 machine
+scp -i 'training\EC2 Key Pair.pem' -r .\code\* ec2-user@98.81.149.168:~/
+
+-- Login into EC2
+ssh -i 'training\EC2 Key Pair.pem' ec2-user@98.81.149.168
+
+--Run initial setup
+sh initial_setup.sh
+
+--Run files_move.sh
+sh files_move.sh
+
