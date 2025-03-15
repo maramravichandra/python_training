@@ -18,7 +18,6 @@ def get_secretvalue():
     return db_username, db_password
 
 
-# Function for query execution which takes user input for dbname & query
 def execute_query(db_name, table_name, files, s3_base_dir, created_user):
     db_username, db_password = get_secretvalue()
     print("db_name : ", db_name)
@@ -46,7 +45,7 @@ def execute_query(db_name, table_name, files, s3_base_dir, created_user):
             database=db_name
         )
         insert_query = """insert into {db_name}.{table_name}(name, createdby, created_date, location)
-    values( '{}', '{}', current_date(), '{}' )"""
+                          values( '{}', '{}', current_date(), '{}' )"""
         cursor = connection.cursor()
         for file in files:
             formatted_query = insert_query.format(file, created_user, s3_base_dir)
