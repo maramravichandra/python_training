@@ -31,8 +31,8 @@ def execute_query(db_name, table_name, files, s3_base_dir, created_user):
         database=''
     )
     cursor = connection.cursor()
-    cursor.execute(f"create database if not exists {db_name}")
-    cursor.execute(f"create table if not exists {db_name}.{table_name}( name varchar(100), createdby varchar(50), created_date date, location varchar(200))")
+    cursor.execute("create database if not exists {}".format(db_name))
+    cursor.execute("create table if not exists {}.{}( name varchar(100), createdby varchar(50), created_date date, location varchar(200))".format(db_name, table_name))
     connection.commit()
     cursor.close()
     connection.close()
@@ -44,11 +44,11 @@ def execute_query(db_name, table_name, files, s3_base_dir, created_user):
             password=db_password,
             database=db_name
         )
-        insert_query = """insert into {db_name}.{table_name}(name, createdby, created_date, location)
+        insert_query = """insert into {}.{}(name, createdby, created_date, location)
                           values( '{}', '{}', current_date(), '{}' )"""
         cursor = connection.cursor()
         for file in files:
-            formatted_query = insert_query.format(file, created_user, s3_base_dir)
+            formatted_query = insert_query.format(db_name, table_name, file, created_user, s3_base_dir)
             print("Formatted Query : ", formatted_query)
             cursor.execute(formatted_query)
 
@@ -61,10 +61,15 @@ def execute_query(db_name, table_name, files, s3_base_dir, created_user):
 
 
 # Input & function call
-if __name__=="main":
-    db_name = sys.argv[0]
-    table_name = sys.argv[1]
-    files = sys.argv[2].split(" ")
-    s3_base_dir = sys.argv[3]
-    created_user = sys.argv[4]
+if __name__=="__main__":
+    db_name = sys.argv[1]
+    print("Db Name", db_name)
+    table_name = sys.argv[2]
+    print("Table Name", table_name)
+    files = sys.argv[3].split(" ")
+    print("Files", files)
+    s3_base_dir = sys.argv[4]
+    print("S3 base directory", s3_base_dir)
+    created_user = sys.argv[5]
+    print("Created User", created_user)
     execute_query(db_name, table_name, files, s3_base_dir, created_user)
