@@ -170,3 +170,13 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+.idea/misc.xml
+.idea/codeStyles
+.idea/aws.xml
+.idea/git_toolbox_blame.xml
+.idea/git_toolbox_prj.xml
+.idea/material_theme_project_new.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/workspace.xml
