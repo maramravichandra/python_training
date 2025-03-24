@@ -10,4 +10,3 @@ echo "User files directory has been created."
 echo "Scheduling cron job for every 5 minutes"
 sudo yum install cronie cronie-anacron
 #crontab -e
-*/5 * * * * ~/file_move.sh

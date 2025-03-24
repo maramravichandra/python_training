@@ -10,5 +10,9 @@ for file in "${files[@]}"; do
 done
 
 echo "python3 ~/ec2_connect_rds.py testdb s3_object_details "${files[@]}" s3://image-upload-test-rc/user_files/ $(whoami)"
-python3 ~/ec2_connect_rds.py testdb s3_object_details "${files[@]}" s3://image-upload-test-rc/user_files/ $(whoami)
-echo "Data has been inserted into RDS"
+result=$(python3 ~/ec2_connect_rds.py testdb s3_object_details "${files[@]}" s3://image-upload-test-rc/user_files/ $(whoami))
+if ( result == 0 ) then
+    echo "Data has been inserted into RDS"
+else
+  echo "Got some error while inserting data into RDS"
+fi
