@@ -3,7 +3,7 @@ import os
 import pymysql
 import sys
 
-user_name = os.environ['USER_NAME']
+user_name = 'admin' #os.environ['USER_NAME']
 password = os.environ['PASSWORD']
 rds_proxy_host = os.environ['RDS_PROXY_HOST']
 db_name = os.environ['DB_NAME']
@@ -14,12 +14,10 @@ def get_connection():
         print("Password:", password)
         print("RDS Proxy host:", rds_proxy_host)
         print("DB name:", db_name)
-        conn = pymysql.connect(host=rds_proxy_host, user=user_name, passwd=password, db=db_name, connect_timeout=5)
+        conn = pymysql.connect(host=rds_proxy_host, port=3306, user=user_name,
+                               passwd=password, db=db_name, connect_timeout=600)
+        print("SUCCESS: Connection to RDS MySQL instance succeeded")
         return conn
-    except pymysql.MySQLError as e:
-        print("ERROR: Unexpected error: Could not connect to MySQL instance.")
-        print(e)
-        sys.exit(1)
     except Exception as e:
         print(e)
         sys.exit(1)
@@ -33,7 +31,7 @@ def insert_records(data):
     print("Inserting Query: ", insert_sql)
     with conn.cursor() as cur:
         cur.execute("""create table if not exists image_details (bucketName varchar(100) not null, 
-        awsRegion, eventName, eventTime, sourceIPAddress, objectKey)""")
+        awsRegion varchar(200) , eventName varchar(100) , eventTime varchar(100) , sourceIPAddress varchar(100) , objectKey varchar(200) )""")
         for record in data:
             cur.execute(insert_sql, (record['bucketName'],record['awsRegion'],record['eventName']
                                      ,record['eventTime'],record['sourceIPAddress'],record['objectKey']))
@@ -42,7 +40,6 @@ def insert_records(data):
 
 def lambda_handler(event, context):
     print("Received event: " , event)
-    print("Publish new version")
     records = event['Records']
     print("Records: ", records)
     bucket = records[0]['s3']['bucket']['name']
